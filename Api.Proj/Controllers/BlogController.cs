@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace Api.Proj.Controllers
 {
@@ -15,15 +16,15 @@ namespace Api.Proj.Controllers
         {
             _logger = logger;
         }
-
+        
         [HttpGet]
-        public IEnumerable<BlogPost> Get()
+        public async Task<ActionResult<IEnumerable<BlogPost>>> Get()
         {
             throw new NotImplementedException();
         }
 
         [HttpGet("{id}")]
-        public BlogPost Get(int id)
+        public async Task<ActionResult<BlogPost>> Get(int id)
         {
             throw new NotImplementedException();
         }
